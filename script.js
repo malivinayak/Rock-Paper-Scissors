@@ -72,13 +72,7 @@ function updateMovesTable(result, playerMove, computerMove) {
     newRow.scrollIntoView({ block: 'end', behavior: 'smooth' });
 }
 
-let isFirstRound = true;
-
 function handleButtonClick(e) {
-    if(isFirstRound) {
-        table.classList.remove('visibility');
-        isFirstRound = false;
-    }
     const playerSelection = e.target.id.slice(0, -4);
     const computerSelection = computerPlay();
     computerMoveEl.textContent = `Computer chose: ${computerSelection}`;
@@ -89,6 +83,9 @@ function handleButtonClick(e) {
     const result = playRound(playerSelection, computerSelection);
     animateResult(result);
     updateMovesTable(result, playerSelection, computerSelection, score);
+    if (round > 0) {
+        table.classList.remove('visibility');
+    }
 }
 
 buttons.forEach((button) => {
