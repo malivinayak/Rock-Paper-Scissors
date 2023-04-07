@@ -74,7 +74,7 @@ function updateMovesTable(result, playerMove, computerMove) {
 function handleButtonClick(e) {
     const playerSelection = e.target.id.slice(0, -4);
     const computerSelection = computerPlay();
-    computerMoveEl.textContent = `Computer chose ${computerSelection}`;
+    computerMoveEl.textContent = `Computer chose: ${computerSelection}`;
     computerMoveEl.classList.add("animate");
     setTimeout(() => {
         computerMoveEl.classList.remove("animate");
