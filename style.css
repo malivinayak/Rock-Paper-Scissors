@@ -250,6 +250,10 @@ button.dark-mode:hover {
     border: 2px solid #fff;
 }
 
+.visibility{
+    display: none;
+}
+
 table.dark-mode {
     background-color: #f9f9f9;
     border-spacing: 10;

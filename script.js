@@ -6,6 +6,7 @@ const buttons = document.querySelectorAll("button");
 const computerMoveEl = document.getElementById("computer-move");
 const resultEl = document.getElementById("result");
 const scoreEl = document.getElementById("score");
+const table = document.getElementById("table-container");
 const movesTable = document.getElementById("moves-table");
 
 let score = 0;
@@ -71,7 +72,13 @@ function updateMovesTable(result, playerMove, computerMove) {
     newRow.scrollIntoView({ block: 'end', behavior: 'smooth' });
 }
 
+let isFirstRound = true;
+
 function handleButtonClick(e) {
+    if(isFirstRound) {
+        table.classList.remove('visibility');
+        isFirstRound = false;
+    }
     const playerSelection = e.target.id.slice(0, -4);
     const computerSelection = computerPlay();
     computerMoveEl.textContent = `Computer chose: ${computerSelection}`;
