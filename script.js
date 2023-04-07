@@ -26,7 +26,14 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === SCISSORS && computerSelection === PAPER)
     ) {
         score++;
-        return "You win!";
+        const result = "You win!";
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = result;
+        resultDiv.classList.add("glory");
+        setTimeout(() => {
+            resultDiv.classList.remove("glory");
+        }, 1000);
+        return result;
     } else {
         score--;
         return "Computer wins!";
