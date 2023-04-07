@@ -96,7 +96,8 @@ button:hover {
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 10;
     width: 100%;
     max-width: 800px;
 }
@@ -105,18 +106,17 @@ th,
 td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
 }
 
-th {
-    background-color: #dedede;
+tr:first-child {
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: #d9d9d9;
 }
 
 tbody tr:hover {
@@ -206,8 +206,8 @@ input:checked+.slider:before {
 
 /* Dark Mode */
 body.dark-mode {
-    color: #fff;
-    background-color: #333;
+    color: #f2f2f2;
+    background-color: #1a1a1a;
 }
 
 h1.dark-mode {
@@ -223,14 +223,15 @@ h1.dark-mode {
 }
 
 button.dark-mode {
-    background-color: #333;
-    border: 2px solid #fff;
+    background-color: #2f343a;
     color: #fff;
+    border: 2px solid #343a40;
+    transition: all 0.5s ease-in-out;
 }
 
 button.dark-mode:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #ccc;
+    color: #000;
 }
 
 #computer-move.dark-mode {
@@ -250,21 +251,22 @@ button.dark-mode:hover {
 }
 
 table.dark-mode {
-    color: #eee;
-    border-color: #333;
+    background-color: #f9f9f9;
+    border-spacing: 10;
+    color: #333;
+}
+
+table.dark-mode tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.dark-mode tr:nth-child(odd) {
+    background-color: #d9d9d9;
 }
 
 table.dark-mode th {
     background-color: #444;
-}
-
-th.dark-mode {
-    background-color: #444;
-    color: #333;
-}
-
-table.dark-mode tr:nth-child(odd) {
-    background-color: #999;
+    color: #fff;
 }
 
 /* Text Effect After Wining */
