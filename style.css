@@ -5,24 +5,25 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  h1 {
+    overflow-y: hidden;
+}
+
+h1 {
     text-align: center;
-  }
-  
-  #game-container {
-    max-width: 400px;
+}
+
+#game-container {
+    max-width: 800px;
     text-align: center;
-  }
-  
-  .button-container {
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  button {
+}
+
+button {
     font-size: 20px;
     margin: 10px;
     padding: 10px 20px;
@@ -32,73 +33,92 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     animation: bounce 1.5s ease-in-out forwards;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #333;
     color: #fff;
-  }
-  
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  #computer-move {
+}
+
+#computer-move {
     text-align: center;
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
     color: black;
-  }
-  
-  #computer-move.animate {
-    animation: fade-in 1s ease-in-out forwards;
-  }
-  
-  .animate-fade {
+}
+
+#computer-move.animate {
+    opacity: 1;
+}
+
+.animate-fade {
     animation: fade 1s ease-in-out;
-  }
-  
-  @keyframes fade {
+}
+
+@keyframes fade {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      transform: translateY(-10px);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  #result {
+}
+
+#result {
     font-size: 24px;
     margin-top: 20px;
-  }
-  
-  #score {
+}
+
+#score {
     font-size: 20px;
     margin-top: 20px;
-  }
-  
+}
+
+#table-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #dedede;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}

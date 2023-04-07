@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Rock, Paper, Scissors</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="game-container">
-        <div class="button-container">
-          <button id="rock-btn">Rock</button>
-          <button id="paper-btn">Paper</button>
-          <button id="scissors-btn">Scissors</button>
-        </div>
-        <div id="computer-move"></div>
-        <p id="result"></p>
-        <p id="score">Score: 0</p>
+    <h1>Rock Paper Scissors</h1>
+      <div id="computer-move"></div>
+      <div class="button-container">
+        <button id="rock-btn">Rock</button>
+        <button id="paper-btn">Paper</button>
+        <button id="scissors-btn">Scissors</button>
       </div>
-  <script src="script.js"></script>
-</body>
+      <div id="result"></div>
+      <div id="score"></div>
+      <div id="table-container">
+      <table id="moves-table">
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Player Move</th>
+            <th>Computer Move</th>
+            <th>Result</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
