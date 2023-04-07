@@ -129,20 +129,145 @@ tbody tr:hover {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
-  }
-  
-  @keyframes glory {
+}
+
+@keyframes glory {
     0% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
+
     50% {
-      transform: scale(1.5);
-      opacity: 0.5;
+        transform: scale(1.5);
+        opacity: 0.5;
     }
+
     100% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
-  }
-  
+}
+
+/* Dark-Light mode */
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    color: #fff;
+    background-color: #333;
+}
+
+h1.dark-mode {
+    color: #fff;
+}
+
+#game-container.dark-mode {
+    border: none;
+}
+
+.button-container.dark-mode {
+    border: 2px solid #fff;
+}
+
+button.dark-mode {
+    background-color: #333;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+button.dark-mode:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#computer-move.dark-mode {
+    color: #fff;
+}
+
+#result.dark-mode {
+    color: #fff;
+}
+
+#score.dark-mode {
+    color: #fff;
+}
+
+#table-container.dark-mode {
+    border: 2px solid #fff;
+}
+
+table.dark-mode {
+    color: #eee;
+    border-color: #333;
+}
+
+table.dark-mode th {
+    background-color: #444;
+}
+
+th.dark-mode {
+    background-color: #444;
+    color: #333;
+}
+
+table.dark-mode tr:nth-child(odd) {
+    background-color: #999;
+}
+
+/* Text Effect After Wining */
+.glory.dark-mode {
+    color: #fff;
+}

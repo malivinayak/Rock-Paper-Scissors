@@ -87,3 +87,16 @@ function handleButtonClick(e) {
 buttons.forEach((button) => {
     button.addEventListener("click", handleButtonClick);
 });
+
+// Dark-Light Mode
+$(document).ready(function () {
+    $('#dark-mode-toggle input').change(function () {
+        $('body').toggleClass('dark-mode');
+        $('#game-container').toggleClass('dark-mode');
+        $('button').toggleClass('dark-mode');
+        $('table').toggleClass('dark-mode');
+        $('#computer-move').toggleClass('dark-mode');
+        $('#th').toggleClass('dark-mode');
+        $('#tr.nth-child').toggleClass('dark-mode');
+    });
+});
