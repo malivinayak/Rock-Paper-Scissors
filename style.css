@@ -250,23 +250,37 @@ button.dark-mode:hover {
     border: 2px solid #fff;
 }
 
+/* 
 .visibility{
     display: none;
-}
+} */
 
 table.dark-mode {
-    background-color: #f9f9f9;
-    border-spacing: 10;
-    color: #333;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: block;
+    background-color: #6e768166;
+    color: #e6edf3;
+}
+
+table.dark-mode th {
+    font-weight: 600;
+}
+
+table.dark-mode th td {
+    padding: 6px 13px;
+    border: 1px solid #30363d;
+}
+
+table.dark-mode tr {
+    background-color: #0d1117;
+    border-top: 1px solid #21262d;
 }
 
 table.dark-mode tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #161b22;
 }
 
-table.dark-mode tr:nth-child(odd) {
-    background-color: #d9d9d9;
-}
 
 table.dark-mode th {
     background-color: #444;
