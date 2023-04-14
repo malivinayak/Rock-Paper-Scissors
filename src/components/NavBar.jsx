@@ -50,9 +50,8 @@ export const NavBar = () => {
                 <h1 className="text-xl font-bold">Rock Paper Scissor</h1>
                 <div className="flex items-center">
                     <button
-                        className={isDarkMode ?
-                            "flex items-center justify-center w-15 h-10 rounded-full bg-blue-200 ease-in-out outline-0	" :
-                            "flex items-center justify-center w-15 h-10 rounded-full bg-green-800 ease-in-out outline-0	"}
+                        className= "flex items-center justify-center w-fit h-fit ease-in-out outline-0 " 
+                        
                         onClick={changeTheme}
                     >
                         <svg id="darkMode" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
